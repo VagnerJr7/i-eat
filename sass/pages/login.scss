@@ -1,0 +1,101 @@
+body {
+  background-color: $color-body;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.title-login {
+  color: #e6ddbc;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  font-style: normal;
+}
+
+.label-title {
+  color: #e6ddbc;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.sub-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30vw;
+  height: 70vh;
+  border-radius: 12px;
+  box-shadow: red 0px 13px 27px -5px;
+  background-color: $color-navbar;
+}
+
+h2 {
+  margin: 1.5rem 0 2rem 0;
+  text-align: center;
+}
+
+label {
+  padding-left: 16px;
+  opacity: 0.75;
+}
+
+.input-form {
+  display: flex;
+  border-radius: 50px;
+  border-style: none;
+  outline: none;
+  margin-top: 8px;
+  padding: 12px 24px;
+  width: 250px;
+  background-color: white;
+}
+
+.input-form:focus {
+  opacity: 0.7;
+}
+
+.button-entrar {
+  padding: 12px 48px;
+  border-radius: 50px;
+  color: $color-body;
+  margin-top: 1rem;
+  cursor: pointer;
+  outline: none;
+  border-width: 0;
+  background-color: red;
+  font-weight: 600;
+  width: 100%;
+}
+
+.button-entrar:hover {
+  opacity: 0.8;
+}
+
+.button-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.criarConta {
+  padding-left: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  color: red;
+}
+
+.criarConta:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 964px) {
+  .sub-form {
+    width: auto;
+  }
+}

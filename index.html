@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I eat</title>
+
+    <!-- Css Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!--Style Css-->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Icon Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+
+    <!-- Javascript -->
+    <script src="./public/dist/index.js"></script>
+
+    <!-- Fonte do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid container00 container01">
+      <div class="container-fluid">
+        <header class="header">
+          <nav class="navbar border-bottom border-body navbar-expand">
+            <div class="container">
+              <a class="navbar-brand" href="#" id="home-navbar">I eat</a>
+
+              <div class="button" id="user-section">
+                <a href="/criarConta.html" id="">
+                  <button
+                    class="criarConta btn btn-outline-danger m-2"
+                    type="button"
+                  >
+                    Criar Conta
+                  </button>
+                </a>
+
+                <a href="/login.html" id="">
+                  <button class="entrar btn btn-danger" type="button">
+                    Entrar
+                  </button>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <main class="main">
+          <span class="title">
+            <p class="title-site pt-4">Sanduíches</p>
+          </span>
+
+          <div class="modal" tabindex="-1" id="modal-item">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">X-burguer</h5>
+                  <button
+                    type="button"
+                    id="button-close"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>Deseja adicionar este produto no carrinho?</p>
+                  <p id="modal-value">R$ 17,00</p>
+                </div>
+                <div class="modal-footer">
+                  <input
+                    type="number"
+                    name="product-qtd-input"
+                    id="product-qtd-input"
+                  />
+                  <button
+                    type="button"
+                    class="adc-button btn btn-outline-danger"
+                  >
+                    adicionar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Container que será exibido sobre a tela -->
+          <div id="container-sobre-tela">
+            <div class="container">
+              <h2 class="bi bi-bag"></h2>
+            </div>
+          </div>
+
+          <!-- Aside que será exibido ao clicar no container-sobre-tela -->
+          <aside id="product-info-aside">
+            <h2 class="title-aside">Carrinho de Compras</h2>
+            <ul id="product-list-aside"></ul>
+
+            <button id="close-aside" class="btn btn-outline-danger">
+              Fechar
+            </button>
+
+            <button class="btn btn-outline-success">Comprar</button>
+          </aside>
+
+          <div class="product-list container text-center">
+            <div class="row">
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container item-Ieat">
+                    <p class="title-product pt-2">X-burguer</p>
+                    <img
+                      src="./images/x-burguer.png"
+                      alt="image-product"
+                      class="image-product"
+                    />
+                    <p class="description-item pt-2">
+                      Pão com gegelin, 2 hamburgueres de carne, salada, bacon,
+                      queijo cheddar.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 17,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-b">
+                  <div class="container-fluid item-Ieat">
+                    <p class="title-product pt-2">X-Salada</p>
+                    <img
+                      src="./images/x-salada.png"
+                      alt="image-product"
+                      class="image-product"
+                    />
+                    <p class="description-item pt-2">
+                      Pão com gegelin, 1 hamburguer de carne, salada, bacon,
+                      queijo e picles.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 12,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-b">
+                  <div class="container-fluid item-Ieat">
+                    <p class="title-product pt-2">Duplo Cheddar</p>
+                    <img
+                      src="./images/duplo-cheddar.png"
+                      alt="image-product"
+                      class="image-product"
+                    />
+                    <p class="description-item pt-2">
+                      Pão com gegelin, 1 hamburguer de carne, salada, tomate,
+                      bacon, queijo cheddar.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 15,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container-fluid item-xTudo">
+                    <p class="title-product pt-2">X-Tudo</p>
+                    <img
+                      src="./images/x-tudo.png"
+                      alt="image-product"
+                      class="image-product"
+                    />
+                    <p class="description-item pt-2">
+                      Pão com gegelin, 2 hamburgueres de carne, salada, bacon...
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 19,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-list container text-center pt-4">
+            <div class="row">
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container item-Ieat">
+                    <p class="title-product pt-2">X-chicken Kids</p>
+                    <img
+                      src="./images/x-chickenKids.png"
+                      alt="image-product"
+                      class="image-product"
+                    />
+                    <p class="description-item pt-2">
+                      Pão com gegelin, 1 chicken, salada, bacon, queijo.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 12,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container-fluid item-Ieat">
+                    <p class="title-product pt-2">Misto Quente</p>
+                    <img
+                      src="./images/x-mistoQuente.png"
+                      alt="image-product"
+                      class="image-product-mistoQuente"
+                    />
+                    <p class="description-item pt-2">
+                      Pão com gegelin, presunto, bacon, queijo cheddar.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 12,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container-fluid item-Ieat">
+                    <p class="title-product pt-2">X-Picanha</p>
+                    <img
+                      src="./images/x-picanha.png"
+                      alt="image-product"
+                      class="image-product-x-picanha"
+                    />
+                    <p class="description-item pt-2">
+                      Pão com gegelin, 2 picanha, salada, bacon, queijo cheddar.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 15,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container-fluid item-Ieat">
+                    <p class="title-product pt-2">X-Vegan Kids</p>
+                    <img
+                      src="./images/x-veganKids.png"
+                      alt="image-product"
+                      class="image-product pt-4"
+                    />
+                    <p class="description-item pt-2">
+                      Pão com gegelin, carn vegan, salada, bacon, queijo
+                      cheddar.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 19,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="container-fluid container00 container02">
+      <div class="container-fluid">
+        <main class="main">
+          <span class="title">
+            <p class="title-site">Porções</p>
+          </span>
+
+          <div class="product-list container text-center">
+            <div class="row">
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container item-Ieat">
+                    <p class="title-product pt-2">
+                      Porção de batata frita com Bacon
+                    </p>
+                    <img
+                      src="./images/batataBacon.png"
+                      alt="image-product"
+                      class="image-product"
+                    />
+                    <p class="description-item pt-2">
+                      poçoes de fritas, com molho e bacon.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 17,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container-fluid item-Ieat">
+                    <p class="title-product pt-2">Porção de batata frita</p>
+                    <img
+                      src="./images/batataFritaa.png"
+                      alt="image-product"
+                      class="image-product"
+                    />
+                    <p class="description-item pt-2">
+                      Porção de fritas temperadas.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 12,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container-fluid item-Ieat">
+                    <p class="title-product pt-2">Espetinho</p>
+                    <img
+                      src="./images/espetinho.png"
+                      alt="image-product"
+                      class="image-product-espetinho"
+                    />
+                    <p class="description-item pt-2">
+                      Espetinho de frango com bacon ou carne.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 15,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container-fluid item-Ieat">
+                    <p class="title-product pt-2">Torresmo</p>
+                    <img
+                      src="./images/torresmoooo.png"
+                      alt="image-product"
+                      class="image-product"
+                    />
+                    <p class="description-item pt-2">Porção de torresmo.</p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 19,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <span class="title">
+            <p class="title-site pt-4">Bebidas</p>
+          </span>
+
+          <div class="product-list container text-center">
+            <div class="row">
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container item-Ieat">
+                    <p class="title-product pt-2">Refrigerante lata</p>
+                    <img
+                      src="./images/refriLataaa.png"
+                      alt="image-product"
+                      class="image-product"
+                    />
+                    <p class="description-item pt-2">
+                      Coca-cola, pepsi, soda, mineiro e guaraná Jesus.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 7,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container-fluid item-Ieat">
+                    <p class="title-product pt-2">Refrigerante 2,5 litros</p>
+                    <img
+                      src="./images/r4efrirante.png"
+                      alt="image-product"
+                      class="image-product"
+                    />
+                    <p class="description-item pt-2">
+                      Coca-cola, pepsi, soda, mineiro e guaraná Jesus.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 12,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container-fluid item-Ieat">
+                    <p class="title-product pt-2">Chopp</p>
+                    <img
+                      src="./images/chopppverd.png"
+                      alt="image-product"
+                      class="image-product-chopp"
+                    />
+                    <p class="description-item pt-2">
+                      Amstel, original, coronna, skol beats.
+                    </p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 15,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-list-item col">
+                <div class="text-decoration-none" href="#" id="product-list-a">
+                  <div class="container-fluid item-Ieat">
+                    <p class="title-product pt-2">Heineken Longnek</p>
+                    <img
+                      src="./images/heinekLong.png"
+                      alt="image-product"
+                      class="image-product"
+                    />
+                    <p class="description-item pt-2">Heineken Longnek</p>
+                    <span class="price-product text-danger">
+                      <i class="bi bi-coin"> R$ 10,00</i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Script Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </body>
+</html>

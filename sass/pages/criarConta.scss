@@ -1,0 +1,47 @@
+body {
+  background-color: $color-body;
+}
+
+.form-criarConta {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.title-criarConta {
+  color: #e6ddbc;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  font-style: normal;
+}
+
+.p-criarConta {
+  margin: 1.5rem 0 2rem 0;
+  text-align: center;
+}
+
+.label-title {
+  color: #e6ddbc;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.sub-form-criarConta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  height: 80vh;
+  border-radius: 12px;
+  box-shadow: red 0px 13px 27px -5px;
+  background-color: $color-navbar;
+}
+
+@media (max-width: 679px) {
+  .sub-form-criarConta {
+    width: auto;
+  }
+}

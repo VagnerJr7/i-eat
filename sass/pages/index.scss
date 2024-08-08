@@ -1,0 +1,163 @@
+.container00 {
+  background-color: $color-body;
+  min-height: 130vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar-brand {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 700;
+  font-size: 100px;
+  font-style: normal;
+}
+
+.title-site {
+  color: #e6ddbc;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  font-style: normal;
+}
+
+.item-Ieat {
+  width: auto;
+  height: 295px;
+  background-color: $color-navbar;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  transition: border-color 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: red; /* Cor da borda ao passar o cursor */
+  }
+}
+
+.item-xTudo {
+  width: auto;
+  background-color: $color-navbar;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  transition: border-color 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: red; /* Cor da borda ao passar o cursor */
+  }
+}
+
+.title-product {
+  color: $color-text;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.image-product {
+  width: 150px;
+  height: auto;
+  border-radius: 3px;
+}
+
+.image-product-x-picanha {
+  width: 130px;
+  height: 120px;
+  border-radius: 3px;
+}
+
+.image-product-mistoQuente {
+  width: 130px;
+  height: 120px;
+  border-radius: 3px;
+}
+
+.image-product-espetinho {
+  width: 130px;
+  height: 120px;
+  border-radius: 3px;
+}
+
+.image-product-chopp {
+  width: 100px;
+  height: 120px;
+  border-radius: 3px;
+}
+
+.description-item {
+  color: $color-text;
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 400;
+  font-size: 15px;
+  font-style: normal;
+}
+
+#criarContaContainer {
+  background-color: #e6ddbc;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+#product-qtd-input {
+  width: 40px;
+  height: auto;
+}
+
+#container-sobre-tela {
+  position: fixed;
+  color: $color-text;
+  bottom: 0;
+  right: 0;
+  display: none; /* Inicialmente oculto */
+  margin-bottom: 20px; /* Margem inferior */
+  margin-right: 20px; /* Margem direita */
+  cursor: pointer;
+}
+
+#container-sobre-tela .container {
+  background-color: red;
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid $color-text;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Inicialmente fora da tela */
+  width: 300px;
+  height: 100%;
+  background-color: $color-text;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  padding: 20px;
+  display: none; /* Inicialmente oculto */
+}
+aside.open {
+  right: 0; /* Move o aside para a tela */
+  display: block;
+}
+
+.title-aside {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 1199px) {
+  .description-item {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 991px) {
+  .product-list-item {
+    width: 400px;
+    height: 370px;
+  }
+}
+
+@media (max-width: 331px) {
+}
